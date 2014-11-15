@@ -3,6 +3,7 @@ require 'open-uri'
 module GoogleFeed
 
   def self.fetch_articles(feed_urls)
+    # Fetch articles from an array of rss feed urls
     GoogleAjax.api_key = 'AIzaSyBiCL446e7JMaa8tTTtMcatRnkqBhN2Fzg'
     GoogleAjax.referer = 'http://time-back.herokuapp.com'
     articles = []
@@ -31,3 +32,8 @@ module GoogleFeed
   end
 
 end
+
+
+
+
+

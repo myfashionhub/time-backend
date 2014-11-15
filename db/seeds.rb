@@ -27,7 +27,7 @@ end
 
 articles = Article.aggregate
 articles.each do |article|
-  Articles.find_or_create_by({
+  Article.find_or_create_by({
     url: article[:url],
     title: article[:title],
     publication: article[:publication],

@@ -1,6 +1,7 @@
 require "#{Rails.root}/lib/google_feed"
 
 class Article < ActiveRecord::Base
+  validates_uniqueness_of :url
   has_and_belongs_to_many :tags
 
   def self.aggregate

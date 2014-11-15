@@ -12,6 +12,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
-group :production do
-  gem 'rails_12factor'
-end
+
+gem 'rails_12factor' group: :production
+

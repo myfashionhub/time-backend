@@ -7,7 +7,7 @@ module GoogleFeed
     GoogleAjax.api_key = 'AIzaSyBiCL446e7JMaa8tTTtMcatRnkqBhN2Fzg'
     GoogleAjax.referer = 'http://time-back.herokuapp.com'
     articles = []
-    puts feeds
+
     feeds.each do |feed|
       feed_content = GoogleAjax::Feed.load(URI::encode(feed[:url]), {num: 10})
       publication = feed[:publication]

@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-tags = Tag.create([{name: 'Art'},
+tags = [{name: 'Art'},
                {name: 'Fashion'},
                {name: 'Business'},
                {name: 'Technology'},
@@ -19,4 +19,19 @@ tags = Tag.create([{name: 'Art'},
                {name: 'Health'},
                {name: 'Food'},
                {name: 'Travel'}
-               ])
+        ]
+tags.each do |tag|
+  Tag.find_or_create_by({name: tag[:name]})
+end
+
+
+articles = Article.aggregate
+articles.each do |article|
+  Articles.find_or_create_by({
+    url: article[:url],
+    title: article[:title],
+    publication: article[:publication],
+    extract: article[:extract],
+    date: article[:date_published]
+  })
+end

@@ -47,7 +47,7 @@ function getUrl(tag_id) {
 
 function getHeight(article) {
 	alert('getting height...');
-	$.sharedCount(article.url, function(data){
+	$.sharedCount(article.url, function(article){
 	if(data.Twitter+data.Facebook.share_count < 50) {
 		var minHeight = '225px';
 	}

@@ -52,7 +52,7 @@ function toggleSelectClass(e) {
     contentType: 'application/json',
     success: function(data) {
 		alert(data);
-      getAllArticles(data);
+     /* getAllArticles(data);*/
 	}
   });
   }

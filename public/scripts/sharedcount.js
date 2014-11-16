@@ -1,10 +1,11 @@
 jQuery.sharedCount = function(aurl){
 	
- alert('line1');
- var domain = "//free.sharedcount.com"; /* SET DOMAIN */
- var apikey = "abad4f8685f3613e0df148faf025070029ee37cc" /*API KEY HERE*/
+ alert('line1'); 
+ /*var domain = "http://free.sharedcount.com"; /* SET DOMAIN */ /*
+ var apikey = "abad4f8685f3613e0df148faf025070029ee37cc" /*API KEY HERE*/ /*
  var arg = { 
  data: {
+/*
  url: aurl,
  apikey: apikey
  },
@@ -30,17 +31,15 @@ alert('else');
  arg.dataType += "p";
  }
  return jQuery.ajax(arg);
-};
+};*/
  
- /**
+ 
  url = aurl;
  /*url = encodeURIComponent(aurl || location.href);*/
- /*
+ 
  alert(url);
- var domain = "//free.sharedcount.com"; /* SET DOMAIN */ 
- /*
+ var domain = "http://free.sharedcount.com"; /* SET DOMAIN */ 
  var apikey = "abad4f8685f3613e0df148faf025070029ee37cc" /*API KEY HERE*/
- /*
  alert('preajax');
  $.ajax({
   data:{

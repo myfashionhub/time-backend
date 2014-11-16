@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
 
   after_filter :set_access_control_headers
   after_action :set_access_control_headers
-  helper_method :current_user
 
   def set_access_control_headers
     headers['Access-Control-Allow-Origin'] = '*'

@@ -9,16 +9,13 @@ function getArticle(tag_id) {
   });
 }
 
-getArticle(6);
-
-
 function displayArticles(articles) {
   for (var i = 0; i < articles.length; i++) {
     var article = articles[i];
 	var stories = $('.stories');
-    var storyDiv = $('<div>').addClass('story');
+    var storyDiv = $('<div>').addClass('story').css('background-image','url('+article.img_url+')');
 	var overlay = $('<div>').addClass('overlay');
-	var title = $('<p>').addClass('title').html(article.title);
+	var title = $('<p>').addClass('title').html(article.title)
 	var tldr = $('<p>').addClass('tldr');
 	var articleDiv = $('<div>').addClass('article');
 	var newstext = $('<div>').addClass('newstext').html(article.extract);

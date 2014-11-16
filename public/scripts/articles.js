@@ -27,7 +27,7 @@ function displayArticles(articles) {
     var article = articles[i];
 	alert('hi');
 	var minHeight = getHeight(article[i]);
-	alert(minHeight);
+	alert('sup?');
 	var stories = $('.stories');
     var storyDiv = $('<div>').addClass('story').css('background-image', 'url('+article.img_url+')');
     var storyDiv = $('<div>').addClass('story');

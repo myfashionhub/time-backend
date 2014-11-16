@@ -5,10 +5,6 @@ body {
 	font-weight: 200;
 }
 
-.menubar {
-	
-}
-
 @media all and (max-width: 750px)  {
 	.filterbox {
 		clear: both;
@@ -311,4 +307,3 @@ body {
 .footer .nav ul li a:hover{
 	color:white;
 } 
-

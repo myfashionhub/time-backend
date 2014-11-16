@@ -35,6 +35,11 @@ function getArticle(tag_id) {
     dataType: 'json',
     success: function(data) {
       console.log(data)
+	  alert(data);
+	  alert(data[i]);
+	  alert(data[i].id);
+	  alert(data[i].attr('class'));
+	  alert(data.attr('class'));
 	  for (var i = 1; i < data.length; i++) {
 		  if($(data[i]).parent().hasClass(data[i].id)){
 		  	displayArticles(data[i]);

@@ -20,12 +20,7 @@ function displayArticles(articles) {
   for (var i = 0; i < articles.length; i++) {
   var article = articles[i];
 	var stories = $('.stories');
-<<<<<<< HEAD
     var storyDiv = $('<div>').addClass('story').css('background-image','url('+article.img_url+')');
-=======
-
-  var storyDiv = $('<div>').addClass('story').css('background-image', 'url('+article.img_url+')');
->>>>>>> 9f931588cfeab1809e69859f306a4e20aa356571
 	var overlay = $('<div>').addClass('overlay');
 	var title = $('<p>').addClass('title').html(article.title)
 	var tldr = $('<p>').addClass('tldr');

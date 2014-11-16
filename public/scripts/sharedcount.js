@@ -1,4 +1,4 @@
-function sharedCount(aurl, fn) {
+jQuery.sharedCount = function(url, fn){
  url = encodeURIComponent(url || location.href);
  var domain = "//free.sharedcount.com"; /* SET DOMAIN */
  var apikey = "abad4f8685f3613e0df148faf025070029ee37cc" /*API KEY HERE*/
@@ -67,7 +67,7 @@ $.sharedCount(location.href, function(data){
 
 function getHeight(url) {
 	alert('beginning of getheight function');
-	sharedCount(url, function(data){
+	$.sharedCount(url, function(data){
 	if(data.Twitter+data.Facebook.share_count < 50) {
 		alert('setting minheight');
 		var minHeight = '225px';

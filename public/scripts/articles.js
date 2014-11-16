@@ -35,14 +35,16 @@ function getArticle(tag_id) {
     dataType: 'json',
     success: function(data) {
       console.log(data)
-      displayArticles(data);
+	  for (var i = 1; i < data.length; i++) {
+		  if($(data[i]).parent().hasClass(data[i].id)){
+		  	displayArticles(data[i]);
+		  }
+	  }
     }
   });
 }
 
-function displayArticles(articles) {
-  for (var i = 1; i < articles.length; i++) {
-    var article = articles[i];
+function displayArticles(article) {
 	/*var minHeight = $.sharedCount(article.url);*/
 	var stories = $('.stories');
     var storyDiv = $('<div>').addClass('story '+article.id).css('background-image', 'url('+article.img_url+')');

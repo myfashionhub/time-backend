@@ -1,27 +1,24 @@
 var tagArticlesLoaded = 0;
 
 function getAllArticles(tagArray) {
-  var numselect = 0;
-  for (var i = 0; i < tagArray.length; i++) {
-	  getArticle(tagArray[i].id);
+  var numTags = tagArray.length;
+  for (var i = 0; i < numTags; i++) {
+	  getArticle(tagArray[i].id, numTags);
 	}
-  if (tagArticlesLoaded === tagArray.length - 1) {
-    $('.story').click(toggleContent);
-  }
 }
 
-function getArticle(tag_id) {
+function getArticle(tag_id, numTags) {
   $.ajax({
     url: '/tags/'+tag_id+'/articles',
     type: 'GET',
     dataType: 'json',
     success: function(data) {
-		  displayArticles(data, tag_id);
+		  displayArticles(data, tag_id, numTags);
     }
   });
 }
 
-function displayArticles(articles, tag_id) {
+function displayArticles(articles, tag_id, numTags) {
   for (var i = 1; i < articles.length; i++) {
     var article = articles[i];
   	/*var minHeight = $.sharedCount(article.url);*/
@@ -52,6 +49,11 @@ function displayArticles(articles, tag_id) {
   }
 
   tagArticlesLoaded += 1;
+  console.log(tagArticlesLoaded)
   $('.story').hover(mouseEnter, mouseLeave);
 
+  if (tagArticlesLoaded === numTags) {
+    $('.story').click(toggleContent);
+    console.log('listen here')
+  }
 }

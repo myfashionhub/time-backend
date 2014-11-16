@@ -1,6 +1,5 @@
 jQuery.sharedCount = function(aurl){
 	
-	
  alert('line1');
  var domain = "//free.sharedcount.com"; /* SET DOMAIN */
  var apikey = "abad4f8685f3613e0df148faf025070029ee37cc" /*API KEY HERE*/
@@ -11,12 +10,20 @@ jQuery.sharedCount = function(aurl){
  },
  url: domain + "/url",
  cache: true,
+ type: 'GET',
  dataType: "json"
  };
  alert(arg);
  if ('withCredentials' in new XMLHttpRequest) {
- arg.success = fn;
+alert('if');
+ arg.success= function(data){
+	 if(data.Twitter<10) {
+	 return '200px' }
+	 else {
+	return '500px' }
+ };
  } else {
+alert('else');
  var cb = "sc_" + url.replace(/\W/g, '');
  window[cb] = fn;
  arg.jsonpCallback = cb;
@@ -93,13 +100,13 @@ jQuery.sharedCount = function(aurl){
  return jQuery.ajax(arg);
 };
 */
-
+/*
 $.sharedCount('http://google.com', function(data){
  console.log(data.Twitter); 
        console.log(data.Facebook.like_count);
 	   alert(data.Twitter);
 }); 
-
+*/
 /*
 function getHeight(url) {
 	alert('beginning of getheight function');

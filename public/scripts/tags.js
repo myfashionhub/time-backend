@@ -33,8 +33,10 @@ function toggleSelectClass(e) {
   var tagClass = tag.attr('class');
   if (tagClass.indexOf(' selected') > -1) {
     tag.removeClass('selected').addClass('unselected');
+	getTags();
   } else {
     tag.removeClass('unselected').addClass('selected');
+	getTags();
   }
 }
 

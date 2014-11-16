@@ -1,3 +1,9 @@
+function getAllArticles(tagArray) {
+  for (var i = 0; i < tagArray.length; i++) {
+    getArticle(tagArray[i].id);
+  }
+}
+
 function getArticle(tag_id) {
   $.ajax({
     url: '/tags/'+tag_id+'/articles',
@@ -5,18 +11,17 @@ function getArticle(tag_id) {
     dataType: 'json',
     success: function(data) {
       console.log(data)
+      displayArticles(data);
     }
   });
 }
 
-getArticle(6);
-
-
 function displayArticles(articles) {
   for (var i = 0; i < articles.length; i++) {
-    var article = articles[i];
+  var article = articles[i];
 	var stories = $('.stories');
-    var storyDiv = $('<div>').addClass('story');
+
+  var storyDiv = $('<div>').addClass('story').css('background-image', 'url('+article.img_url+')');
 	var overlay = $('<div>').addClass('overlay');
 	var title = $('<p>').addClass('title').html(article.title);
 	var tldr = $('<p>').addClass('tldr');

@@ -6,7 +6,7 @@ function getTags() {
     contentType: 'application/json',
     success: function(data) {
       displayTags(data);
-      console.log('is this dupe?')
+      getAllArticles(data);
     }
   });
 }

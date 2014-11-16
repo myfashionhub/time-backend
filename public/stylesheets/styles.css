@@ -35,7 +35,6 @@ body {
 }
 
 .stories div{
-	/*background-image:url(~~~~~~~~~~~)*/
 	background-repeat:no-repeat;
 	background-attachment:center;
 	background-position:center;
@@ -44,7 +43,6 @@ body {
     -o-background-size: cover;
 	background-size:100%;
 	width:100%;
-	/*height:~~~~~~~~~~~~*/
 	text-align:center;
 	font-family:'Open Sans',Helvetica,Arial,sans-serif;
 	color:white;

@@ -2,6 +2,42 @@ function sharedCount(aurl, fn) {
  url = encodeURIComponent(url || location.href);
  var domain = "//free.sharedcount.com"; /* SET DOMAIN */
  var apikey = "abad4f8685f3613e0df148faf025070029ee37cc" /*API KEY HERE*/
+ $.ajax({
+  data:{
+	  url:aurl,
+	  apikey: apikey
+  },
+  url:domain + "/url",
+  cache:true,
+  dataType: 'json',
+  success: function(data){
+  if(data.Twitter+data.Facebook.share_count < 50) {
+	  alert('setting minheight');
+	  var minHeight = '225px';
+  }
+  else if(data.Twitter+data.Facebook.share_count < 100) {
+	  alert('setting minheight');
+	  var minHeight = '275px';
+  }
+  else if(data.Twitter+data.Facebook.share_count < 150) {
+	  alert('setting minheight');
+	  var minHeight = '325px';
+  }
+  else if(data.Twitter+data.Facebook.share_count < 200) {
+	  alert('setting minheight');
+	  var minHeight = '475px';
+  }
+  else {
+	  alert('setting minheight');
+	  var minHeight = '500px';
+  }
+  return minHeight;
+  }
+ });
+}
+  
+  /*
+ 
  var arg = { 
  data: {
  url: aurl,
@@ -21,6 +57,8 @@ function sharedCount(aurl, fn) {
  }
  return jQuery.ajax(arg);
 };
+*/
+
 $.sharedCount(location.href, function(data){
  console.log(data.Twitter); 
        console.log(data.Facebook.like_count);

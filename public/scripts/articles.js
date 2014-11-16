@@ -1,7 +1,8 @@
 function getAllArticles(tagArray) {
 	for (var i=0; i<tagArray.length; i++){
-		  alert('generate all statement');
-		  getArticle(tagArray[i].id);
+		if(i==1){
+		  	getArticle(tagArray[i].id);
+		  }
 	  }
   /*$('.story').hide(0);
   var numselect = 0;

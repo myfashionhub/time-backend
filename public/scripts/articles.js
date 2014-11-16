@@ -1,12 +1,7 @@
 function getAllArticles(tagArray) {
-  $('.story').hide(0);
+  $('.story').hide();
   var numselect = 0;
   for (var i = 0; i < tagArray.length; i++) {
-	  alert(tagArray.toString());
-	  alert(tagArray[i]);
-	  alert((tagArray[i]).id);
-	  alert(tagArray.attr('class'));
-	  alert((tagArray[i]).attr('class'));
 	  /*
 	 if(($(tagArray[i]).hasClass('tags selected'))){
 		    getArticle(tagArray[i].id);
@@ -16,7 +11,6 @@ function getAllArticles(tagArray) {
   }
   if(numselect ==0){
 	  for (var i=0; i<tagArray.length; i++){
-		  alert('generate all statement');
 		  getArticle(tagArray[i].id);
 	  }
   }
@@ -64,22 +58,7 @@ function displayArticles(articles) {
 	stories.append(storyDiv);
 	var storyfirstchild=$(storyDiv).children(':first-child');
 	storyDiv.css({
-	  "background-image": 'url('+article.img_url+')',
-	  "background-repeat":"no-repeat",
-	  "background-attachment":"center",
-	  "background-position":"center",
-	  "-webkit-background-size": "cover",
-	  "-moz-background-size": "cover",
-	  "-o-background-size": "cover",
-	  "background-size":"100%",
-	  "width":"100%",
-	  "text-align":"center",
-	  "font-family":"'Open Sans',Helvetica,Arial,sans-serif",
-	  "color":"white",
-	  "vertical-align":"middle",
-	  "padding":"0px",
-	  "margin":"0px",
-	  "z-index":"-1"
+	  "background-image": 'url('+article.img_url+')'
     });
 
 	storyfirstchild.css({

@@ -48,14 +48,12 @@ function displayArticles(articles) {
 	var tldr = $('<p>').addClass('tldr').html('Placeholder tldr text');
 	var articleDiv = $('<div>').addClass('article');
 	var newstext = $('<div>').addClass('newstext').html(article.extract);
-	var shareDiv = $('<div>').addClass('share');
-	var sharelist = $('<ul>');
+	var sharelist = $('<ul>').addClass('share');
 	var fbLi = $('<li>').html('<a href=""><i class="fa fa-facebook"></i></a>');
 	var twitterLi = $('<li>').html('<a href=""><i class="fa fa-twitter"></i></a>');
 	var linkLi = $('<li>').html('<a href=""><i class="fa fa-link"></i></a>');
 	sharelist.append(fbLi).append(twitterLi).append(linkLi);
-	shareDiv.append(sharelist);
-	articleDiv.append(newstext).append(shareDiv);
+	articleDiv.append(newstext).append(sharelist);
 	overlay.append(title).append(tldr);
 	storyDiv.append(overlay).append(articleDiv);
 	stories.append(storyDiv);

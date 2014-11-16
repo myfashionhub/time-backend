@@ -104,19 +104,18 @@ body {
 	text-indent: 2em;
 }
 
-	text-align: right;
-
+.share ul {
+	list-style-type: none;
 }
-
-.share ul li {
+.share li {
 	display: inline;
 	padding-right: 10px;
 
 }
-.share ul li a i:hover {
+.share li a i:hover {
 	color:white;
 }
-.share ul li a i{
+.share li a i {
 	font-size: 2em;
 	color:rgba(224, 224, 224,1);
 }

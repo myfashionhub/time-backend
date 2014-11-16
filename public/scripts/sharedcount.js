@@ -1,9 +1,55 @@
-function sharedCount(url, fn) {
+function sharedCount(url) {
  url = encodeURIComponent(url);
  alert('url here');
  var domain = "//free.sharedcount.com/"; /* SET DOMAIN */
  var apikey = "0b9f43414d786773d90a6a6fd376247cfe218895" /*API KEY HERE*/
- var arg = {
+ $.ajax({
+		url : url,
+		apikey : apikey,
+		type: 'GET',
+		dataType: 'json',
+		success: function(data) {
+			if(data.Twitter+data.Facebook.share_count < 50) {
+				alert('minheight here');
+				var minHeight = '225px';
+			}
+			else if(data.Twitter+data.Facebook.share_count < 100) {
+				alert('minheight here');
+				var minHeight = '275px';
+			}
+			else if(data.Twitter+data.Facebook.share_count < 150) {
+				alert('minheight here');
+				var minHeight = '325px';
+			}
+			else if(data.Twitter+data.Facebook.share_count < 200) {
+				alert('minheight here');
+				var minHeight = '475px';
+			}
+			else {
+				alert('minheight here');
+				var minHeight = '500px';
+			}
+			return minHeight; }
+ 	});
+}
+	 /*
+   url: domain + "/url",
+   cache: true,
+   dataType: "json",
+   if ('witCredentials' in new XMLHttpRequest) {
+ 		success : fn;
+ 	},
+ 	else {
+	 	alert("what is happening??");
+ 	var cb = "sc_" + url.replace(/\W/g, ''),
+ window[cb] = fn,
+ arg.jsonpCallback = cb,
+ arg.dataType += "p"
+ }
+ /*
+	success: fn
+  });
+ /*var arg = {
 	 data: {
 		url : url,
 		apikey : apikey
@@ -11,7 +57,8 @@ function sharedCount(url, fn) {
    url: domain + "/url",
    cache: true,
    dataType: "json"
- };
+ };*/
+ /*
  if ('withCredentials' in new XMLHttpRequest) {
  arg.success = fn;
  }
@@ -23,7 +70,7 @@ function sharedCount(url, fn) {
  arg.dataType += "p";
  }
  return jQuery.ajax(arg);
-};
+};*/
 
 /*
 function getAllUrls(tagArray) {
@@ -48,7 +95,8 @@ function getUrl(tag_id) {
 
 function getHeight(article) {
 	alert('getting height...');
-	sharedCount(article.url, function(data){
+	var minHeight = sharedCount(article.url);
+	return minHeight;/*, function(data){
 	alert("inside the fn method in getheight");
 	if(data.Twitter+data.Facebook.share_count < 50) {
 		alert('minheight here');
@@ -71,5 +119,5 @@ function getHeight(article) {
 		var minHeight = '500px';
 	}
 	return minHeight;
-	});
+	});*/
 }

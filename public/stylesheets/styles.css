@@ -26,6 +26,7 @@ body {
 		line-height: 3.4em;
 		margin-left: 0px;
 		border: 2px solid red !important;
+		z-index:5;
 	}
 }
 

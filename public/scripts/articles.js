@@ -43,7 +43,7 @@ function displayArticles(articles) {
 	overlay.append(title).append(tldr);
 	storyDiv.append(overlay).append(articleDiv);
 	stories.append(storyDiv);
-	
+	var storyfirstchild=$(storyDiv).children(':first-child');
 	storyDiv.css({
 	  "background-image": 'url('+article.img_url+')',
 	  "background-repeat":"no-repeat",
@@ -62,7 +62,9 @@ function displayArticles(articles) {
 	  "margin":"0px",
 	  "z-index":"-1"
     });
-	
+	storyfirstchild.css({
+		"border-top": "3px solid rgba(240, 240, 240, 1)"
+	});
 	 title.css({
 	  "font-size":"3em",
 	  "font-family": "Garamond",

@@ -2,7 +2,7 @@ function getAllArticles(tagArray) {
   $('.story').hide(0);
   var numselect = 0;
   for (var i = 0; i < tagArray.length; i++) {
-	  alert(tagArray);
+	  alert(tagArray.toString());
 	  alert(tagArray[i]);
 	  alert((tagArray[i]).id);
 	  alert(tagArray.attr('class'));
@@ -35,21 +35,14 @@ function getArticle(tag_id) {
     dataType: 'json',
     success: function(data) {
       console.log(data)
-	  alert(data);
-	  alert(data[i]);
-	  alert(data[i].id);
-	  alert(data[i].attr('class'));
-	  alert(data.attr('class'));
-	  for (var i = 1; i < data.length; i++) {
-		  if($(data[i]).parent().hasClass(data[i].id)){
-		  	displayArticles(data[i]);
-		  }
-	  }
+		  displayArticles(data);  
     }
   });
 }
 
-function displayArticles(article) {
+function displayArticles(articles) {
+  for (var i = 1; i < articles.length; i++) {
+    var article = articles[i];
 	/*var minHeight = $.sharedCount(article.url);*/
 	var stories = $('.stories');
     var storyDiv = $('<div>').addClass('story '+article.id).css('background-image', 'url('+article.img_url+')');
@@ -115,6 +108,7 @@ function displayArticles(article) {
 	  "line-height": "170%",
 	  "text-indent": "2em"
 	});
+  }
 }
 /*
 function removeArticle(tag_id) {

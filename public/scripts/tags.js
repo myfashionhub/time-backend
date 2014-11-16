@@ -1,6 +1,6 @@
 function getTags() {
   $.ajax({
-    url: '/tags',
+    url: 'http://time-back.herokuapp.com/tags',
     type: 'GET',
     dataType: 'json',
     success: function(data) {

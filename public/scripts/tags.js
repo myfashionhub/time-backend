@@ -33,7 +33,6 @@ function toggleSelectClass(e) {
   var tagClass = tag.attr('class');
   if (tagClass.indexOf(' selected') > -1) {
     tag.removeClass('selected').addClass('unselected');
-	$(document.getElementsByClassName('unselected')).hide(0);
 	$.ajax({
     url: '/tags.json',
     type: 'GET',
@@ -45,7 +44,6 @@ function toggleSelectClass(e) {
   });
   } else {
     tag.removeClass('unselected').addClass('selected');
-	$(document.getElementsByClassName('unselected')).hide(0);
 	$.ajax({
     url: '/tags.json',
     type: 'GET',

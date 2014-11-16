@@ -50,21 +50,25 @@ function getHeight(article) {
 	sharedCount(article.url, function(data){
 	alert("inside the sharedcount method in getheight");
 	if(data.Twitter+data.Facebook.share_count < 50) {
+		alert('minheight here');
 		var minHeight = '225px';
 	}
 	else if(data.Twitter+data.Facebook.share_count < 100) {
+		alert('minheight here');
 		var minHeight = '275px';
 	}
 	else if(data.Twitter+data.Facebook.share_count < 150) {
+		alert('minheight here');
 		var minHeight = '325px';
 	}
 	else if(data.Twitter+data.Facebook.share_count < 200) {
+		alert('minheight here');
 		var minHeight = '475px';
 	}
 	else {
+		alert('minheight here');
 		var minHeight = '500px';
 	}
-	});
-	alert('minheight here');
 	return minHeight;
+	});
 }

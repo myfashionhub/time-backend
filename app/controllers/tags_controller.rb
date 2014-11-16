@@ -1,5 +1,3 @@
-require 'action_controller/mime_types'
-
 class TagsController < ApplicationController
 
   def index

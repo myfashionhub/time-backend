@@ -23,7 +23,7 @@ function displayArticles(articles) {
     var storyDiv = $('<div>').addClass('story');
 	var overlay = $('<div>').addClass('overlay');
 	var title = $('<p>').addClass('title').html(article.title)
-	var tldr = $('<p>').addClass('tldr').html(article.extract);
+	var tldr = $('<p>').addClass('tldr').html('Placeholder tldr text');
 	var articleDiv = $('<div>').addClass('article');
 	var newstext = $('<div>').addClass('newstext').html(article.extract);
 	var shareDiv = $('<div>').addClass('share');
@@ -68,7 +68,7 @@ function displayArticles(articles) {
 	  "text-align":"right",
 	  "bottom": "0px",
 	  "right":"10px",
-	  "font-size":"1em",
+	  "font-size":"2em",
 	  "font-family":"'Courier New',Courier,serif",
 	  "margin-bottom": "0px"
 	});

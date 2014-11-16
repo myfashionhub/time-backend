@@ -1,10 +1,10 @@
-jQuery.sharedCount = function(url, fn) {
+function sharedCount(aurl, fn) {
  url = encodeURIComponent(url || location.href);
  var domain = "//free.sharedcount.com"; /* SET DOMAIN */
  var apikey = "abad4f8685f3613e0df148faf025070029ee37cc" /*API KEY HERE*/
  var arg = { 
  data: {
- url: "http://google.com",
+ url: aurl,
  apikey: apikey
  },
  url: domain + "/url",
@@ -27,8 +27,8 @@ $.sharedCount(location.href, function(data){
 	   alert(data.Twitter);
 });
 
-function getHeight(article) {
-	$.sharedCount(article.url, function(data){
+function getHeight(url) {
+	sharedCount(url, function(data){
 	if(data.Twitter+data.Facebook.share_count < 50) {
 		var minHeight = '225px';
 	}
@@ -44,6 +44,6 @@ function getHeight(article) {
 	else {
 		var minHeight = '500px';
 	}
-	});
 	return minHeight;
+	});
 }

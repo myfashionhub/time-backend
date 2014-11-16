@@ -131,12 +131,12 @@ body {
 	color:white;
 	vertical-align:middle;
 	padding:0px;
-	border-top:10px solid rgba(102,102,102,1);
-	border-bottom:10px solid rgba(102,102,102,1);
 	margin-top: 150px;
 	margin:0px;
-	border-top:2px solid white;
-	border-bottom:2px solid white;
+}
+
+.stories div:first-child {
+	border-top: 10px solid white;
 }
 
 .title {
@@ -157,7 +157,18 @@ body {
 
 .article {
 	display:none;
+	background-color:rgba(56,56,56,1);
+	border-top: 5px solid rgba(56,56,56,1);
+	border-bottom: 5px solid rgba(56,56,56,1);
+
 }
+.article p {
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 1.25em;
+	text-align: left;
+}
+
 /*
 .overlay div{
 	width:100%;
@@ -166,64 +177,64 @@ body {
 	opacity:0.5;
 }
 */
-.overlay1 {
+#overlay1 {
 	width:100%;
 	background-color:rgba(0,0,0,0.5);
 	height: 300px;
 }
 
-.overlay1:hover {
+#overlay1:hover {
 	background-color:rgba(0,0,0,0);
 
 }
 
-.overlay2 {
+#overlay2 {
 	width:100%;
 	background-color:rgba(0,0,0,0.5);
 	height:100px;
 }
 
-.overlay2:hover{
+#overlay2:hover{
 	background-color:rgba(0,0,0,0);
 }
 
-.overlay3 {
+#overlay3 {
 	width:100%;
 	background-color:rgba(0,0,0,0.5);
 	height:500px;
 }
 
-.overlay3:hover{
+#overlay3:hover{
 	background-color:rgba(0,0,0,0);
 }
 
-.overlay4 {
+#overlay4 {
 	width:100%;
 	background-color:rgba(0,0,0,0.5);
 	height:200px;
 }
 
-.overlay4:hover{
+#overlay4:hover{
 	background-color:rgba(0,0,0,0);
 }
 
-.overlay5 {
+#overlay5 {
 	width:100%;
 	background-color:rgba(0,0,0,0.5);
 	height:100px;
 }
 
-.overlay5:hover {
+#overlay5:hover {
 	background-color:rgba(0,0,0,0);
 }
 
-.overlay6 {
+#overlay6 {
 	width:100%;
 	background-color:rgba(0,0,0,0.5);
 	height:200px;
 }
 
-.overlay6:hover{
+#overlay6:hover{
 	background-color:rgba(0,0,0,0);
 }
 #story1 {

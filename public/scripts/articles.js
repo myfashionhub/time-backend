@@ -5,6 +5,9 @@ function getAllArticles(tagArray) {
 		    getArticle(tagArray[i].id); 
 			numselect = numselect+1;
 	 }
+	 else {
+		 removeArticle(tagArray[i].id);
+	 }
   }
   if(numselect ==0){
 	  for (var i=0; i<tagArray.length; i++){
@@ -101,4 +104,22 @@ function displayArticles(articles) {
 	  "text-indent": "2em"
 	});
   }
+}
+
+function removeArticle(tag_id) {
+  $.ajax({
+    url: '/tags/'+tag_id+'/articles',
+    type: 'GET',
+    dataType: 'json',
+    success: function(data) {
+      console.log(data)
+      removeArticles(data);
+    }
+  });
+}
+
+function removeArticles(articles) {
+  for (var i = 1; i < articles.length; i++) {
+    	$(article[i]).hide(0);
+ 	}
 }

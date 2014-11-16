@@ -1,0 +1,5 @@
+$(function() {
+  // Event listeners
+
+  getTags();
+});

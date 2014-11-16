@@ -71,7 +71,7 @@ function displayArticles(articles) {
 	stories.append(storyDiv);
 	
 	var storyDivStyle = css($(storyDiv));
-	$(storyDiv).css(style);
+	$(storyDiv).css(storyDivStyle);
 	/*storyDiv.css({
 	  "background-image": 'url('+article.img_url+')',
 	  "background-repeat":"no-repeat",

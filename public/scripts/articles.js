@@ -9,6 +9,29 @@ function getArticle(tag_id) {
   });
 }
 
-function displayArticles(articles) {
+getArticle(6);
 
+
+function displayArticles(articles) {
+  for (var i = 0; i < articles.length; i++) {
+    var article = articles[i];
+	var stories = $('.stories');
+    var storyDiv = $('<div>').addClass('story');
+	var overlay = $('<div>').addClass('overlay');
+	var title = $('<p>').addClass('title').html(article.title);
+	var tldr = $('<p>').addClass('tldr');
+	var articleDiv = $('<div>').addClass('article');
+	var newstext = $('<div>').addClass('newstext').html(article.extract);
+	var shareDiv = $('<div>').addClass('share');
+	var sharelist = $('<ul>');
+	var fbLi = $('<li>').html('<a href=""><i class="fa fa-facebook"></i></a>');
+	var twitterLi = $('<li>').html('<a href=""><i class="fa fa-twitter"></i></a>');
+	var linkLi = $('<li>').html('<a href=""><i class="fa fa-link"></i></a>');
+	sharelist.append(fbLi).append(twitterLi).append(linkLi);
+	shareDiv.append(sharelist);
+	articleDiv.append(newstext).append(shareDiv);
+	overlay.append(title).append(tldr);
+	storyDiv.append(overlay).append(articleDiv);
+	stories.append(storyDiv);
+  }
 }

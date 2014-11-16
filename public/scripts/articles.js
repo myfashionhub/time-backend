@@ -12,15 +12,13 @@ function getArticle(tag_id) {
     success: function(data) {
       console.log(data)
       displayArticles(data);
-	  expand();
-	  hover();
     }
   });
 }
 
 function displayArticles(articles) {
   for (var i = 0; i < articles.length; i++) {
-  var article = articles[i];
+	var article = articles[i];
 	var stories = $('.stories');
     var storyDiv = $('<div>').addClass('story');
 	var overlay = $('<div>').addClass('overlay');

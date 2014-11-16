@@ -1,7 +1,10 @@
 jQuery.sharedCount = function(aurl){
+ alert('line1');
  url = encodeURIComponent(aurl || location.href);
+ alert(url);
  var domain = "//free.sharedcount.com"; /* SET DOMAIN */
  var apikey = "abad4f8685f3613e0df148faf025070029ee37cc" /*API KEY HERE*/
+ alert('preajax');
  $.ajax({
   data:{
 	  url:aurl,

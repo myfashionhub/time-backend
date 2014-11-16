@@ -37,7 +37,7 @@ function displayArticles(articles) {
     var article = articles[i];
 	/*var minHeight = $.sharedCount(article.url);*/
 	var stories = $('.stories');
-    var storyDiv = $('<div>').addClass('story').addClass(article.id).css('background-image', 'url('+article.img_url+')');
+    var storyDiv = $('<div>').addClass('story '+article.id).css('background-image', 'url('+article.img_url+')');
 	var overlay = $('<div>').addClass('overlay');
 	var title = $('<p>').addClass('title').html(article.title)
 	var tldr = $('<p>').addClass('tldr').html('Placeholder tldr text');

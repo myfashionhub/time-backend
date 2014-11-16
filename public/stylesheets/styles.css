@@ -29,37 +29,24 @@ body {
 }
 
 
-
 .tagbar {
 	position: fixed;
 	background-color: rgba(240, 240, 240, 1);
 	width: 100% !important;
-	height: 90px !important;
 	top: 50px;
 	left: 0px;
 	margin: 0px;
-	padding: 5px;
-}
-
-.filterbox {
-	position: absolute;
-	height: 50px !important;
-	top: 100px !important;
-	width: 100% !important;
-	left: 0px !important;
-	background-color: rgba(230, 230, 230, 1) !important;
-	border: 1px solid rgba(120, 120, 120, 0.1);
-	border-left: 0px solid;
+	padding: 10px;
+	overflow: auto;
 }
 
 .tag_area {
-	top: 15px;
-	height: 70px;
 	width: 60em;
 	display: block;
-	padding-left: 0;
 	margin: 0 auto;
 	line-height: 3.4em;
+	padding: 10px 0 10px 0;
+	overflow: auto;
 }
 
 .tag_area .row1, .tag_area .row2 {
@@ -86,10 +73,6 @@ body {
 }
 
 .tags:hover {
-	cursor: pointer;
-}
-
-.tags:hover {
 	background-color: rgba(0, 150, 220, 1);
 	border: 1px solid rgba(0, 150, 220, 1);
 	border-radius: 4px;
@@ -99,6 +82,14 @@ body {
 	text-decoration: none;
 	color: rgba(250, 250, 250, 1);
 	display: inline;
+	cursor: pointer;
+}
+
+.filterbox {
+	height: 50px;
+	width: 100% !important;
+	background-color: rgba(230, 230, 230, 1) !important;
+	border: 1px solid rgba(120, 120, 120, 0.1);
 }
 
 .filter_input {

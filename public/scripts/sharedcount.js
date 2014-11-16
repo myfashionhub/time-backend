@@ -6,7 +6,7 @@ jQuery.sharedCount = function(aurl){
  var apikey = "abad4f8685f3613e0df148faf025070029ee37cc" /*API KEY HERE*/
  var arg = { 
  data: {
- url: 'www.google.com',
+ url: aurl,
  apikey: apikey
  },
  url: domain + "/url",
@@ -94,7 +94,7 @@ jQuery.sharedCount = function(aurl){
 };
 */
 
-$.sharedCount(location.href, function(data){
+$.sharedCount('www.google.com', function(data){
  console.log(data.Twitter); 
        console.log(data.Facebook.like_count);
 	   alert(data.Twitter);

@@ -1,12 +1,6 @@
 var expand = function(){
 	$('.stories div').click(function(){
 		$(this).children('.article').slideToggle(500);
-/*		if ($(this).children('.article').is(':visible')) {
-        	$('.stories div').off('mouseenter mouseleave');
-		}
-		else {
-			$('.stories div').on('mouseenter mouseleave');
-		}*/
 	});
 	
 }

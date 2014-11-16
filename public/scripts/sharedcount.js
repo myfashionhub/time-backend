@@ -1,15 +1,15 @@
 jQuery.sharedCount = function (url, fn) {
- url = encodeURIComponent(url || location.href);
+ url = encodeURIComponent(url);
  var domain = "//free.sharedcount.com/"; /* SET DOMAIN */
  var apikey = "0b9f43414d786773d90a6a6fd376247cfe218895" /*API KEY HERE*/
  var arg = {
-   data: {
-    url : url,
-    apikey : apikey
-   },
- url: domain,
- cache: true,
- dataType: "json"
+	 data: {
+		url : url,
+		apikey : apikey
+	 },
+   url: domain + "/url",
+   cache: true,
+   dataType: "json"
  };
  if ('withCredentials' in new XMLHttpRequest) {
  arg.success = fn;
@@ -23,6 +23,7 @@ jQuery.sharedCount = function (url, fn) {
  return jQuery.ajax(arg);
 };
 
+/*
 function getAllUrls(tagArray) {
   for (var i = 0; i < tagArray.length; i++) {
     getUrl(tagArray[i].id);
@@ -40,6 +41,7 @@ function getUrl(tag_id) {
 		}
 	});
 }
+*/
 
 
 function getHeight(article) {

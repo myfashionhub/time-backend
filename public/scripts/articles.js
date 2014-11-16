@@ -12,6 +12,8 @@ function getArticle(tag_id) {
     success: function(data) {
       console.log(data)
       displayArticles(data);
+	  expand();
+	  hover();
     }
   });
 }
@@ -53,7 +55,8 @@ function displayArticles(articles) {
 	  "color":"white",
 	  "vertical-align":"middle",
 	  "padding":"0px",
-	  "margin":"0px"
+	  "margin":"0px",
+	  "z-index":"-1"
     });
 	
 	 title.css({

@@ -23,13 +23,13 @@ function getAllArticles(tagArray) {
 		  alert('generate all statement');
 		  getArticle(tagArray[i].id);
 	  }
-  }
+  }*/
   $.ajax({
 	  success: function(){
 		hover()
 		expand();
 	  }
-  });*/
+  });
 }
 
 function getArticle(tag_id) {

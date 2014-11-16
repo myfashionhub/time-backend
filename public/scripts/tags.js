@@ -1,8 +1,8 @@
 function getTags() {
   $.ajax({
-    url: '/tags',
+    url: '/tags.json',
     type: 'GET',
-    dataType: 'jsonp',
+    dataType: 'json',
     contentType: 'application/json',
     success: function(data) {
       displayTags(data);

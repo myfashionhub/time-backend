@@ -183,19 +183,10 @@ body {
 	height: 300px;
 }
 
-#overlay1:hover {
-	background-color:rgba(0,0,0,0);
-
-}
-
 #overlay2 {
 	width:100%;
 	background-color:rgba(0,0,0,0.5);
 	height:100px;
-}
-
-#overlay2:hover{
-	background-color:rgba(0,0,0,0);
 }
 
 #overlay3 {
@@ -204,18 +195,10 @@ body {
 	height:500px;
 }
 
-#overlay3:hover{
-	background-color:rgba(0,0,0,0);
-}
-
 #overlay4 {
 	width:100%;
 	background-color:rgba(0,0,0,0.5);
 	height:200px;
-}
-
-#overlay4:hover{
-	background-color:rgba(0,0,0,0);
 }
 
 #overlay5 {
@@ -224,19 +207,12 @@ body {
 	height:100px;
 }
 
-#overlay5:hover {
-	background-color:rgba(0,0,0,0);
-}
-
 #overlay6 {
 	width:100%;
 	background-color:rgba(0,0,0,0.5);
 	height:200px;
 }
 
-#overlay6:hover{
-	background-color:rgba(0,0,0,0);
-}
 #story1 {
 	background-image:url('https://ununsplash.imgix.net/photo-1415226620463-aedee27159c5?q=75&fm=jpg&s=a455a083c2fcff54c2127af43cdcacc5');
 	min-height:300px;

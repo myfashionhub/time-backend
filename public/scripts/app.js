@@ -5,4 +5,5 @@ $(function() {
   clickon();
   clickoff();
   expand();
+  hover();
 });

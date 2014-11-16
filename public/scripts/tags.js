@@ -11,11 +11,14 @@ function getTags() {
 }
 
 function displayTags(tagArray) {
-  $('.tag_area').empty();
   for (var i = 0; i < tagArray.length; i++) {
     var tag = tagArray[i];
     var tagLi = $('<li>').addClass('tags');
     tagLi.html(tag.name).attr('data', tag.id);
-    tagLi.appendTo($('.tag_area'));
+    if (i < tagArray.length/2) {
+      tagLi.appendTo($('.tag_area .row1'));
+    } else {
+      tagLi.appendTo($('.tag_area .row2'));
+    }
   }
 }

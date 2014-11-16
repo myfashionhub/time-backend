@@ -22,8 +22,9 @@ function displayArticles(articles, tag_id, numTags) {
   for (var i = 1; i < articles.length; i++) {
     var article = articles[i];
   	/*var minHeight = $.sharedCount(article.url);*/
-  	var stories = $('.stories').attr('data-tag', tag_id);
-    var storyDiv = $('<div>').addClass('story '+article.id).css('background-image', 'url('+article.img_url+')');
+  	var stories = $('.stories');
+    var storyDiv = $('<div>').addClass('story '+article.id)
+    .attr('data-tag', tag_id).css('background-image', 'url('+article.img_url+')');
   	var overlay = $('<div>').addClass('overlay');
   	var title = $('<p>').addClass('title').html(article.title)
   	var tldr = $('<p>').addClass('tldr').html('Placeholder tldr text');
@@ -49,11 +50,9 @@ function displayArticles(articles, tag_id, numTags) {
   }
 
   tagArticlesLoaded += 1;
-  console.log(tagArticlesLoaded)
   $('.story').hover(mouseEnter, mouseLeave);
 
   if (tagArticlesLoaded === numTags) {
     $('.story').click(toggleContent);
-    console.log('listen here')
   }
 }

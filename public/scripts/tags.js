@@ -24,7 +24,17 @@ function displayTags(tagArray) {
     }
   }
   $(".tags").click(function(e) {
+
+    var tagId = $(e.target).attr('data');
+    console.log(tagId)
     toggleSelectClass(e);
+    $('.story').hide();
+    for (var i=0; i < $('.story').length; i++) {
+      if ($($('.story')[i]).attr('data-tag') === tagId) {
+        $($('.story')[i]).fadeIn();
+      }
+    }
+
   });
 }
 

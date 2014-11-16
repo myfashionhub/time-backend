@@ -94,7 +94,7 @@ jQuery.sharedCount = function(aurl){
 };
 */
 
-$.sharedCount('www.google.com', function(data){
+$.sharedCount('http://google.com', function(data){
  console.log(data.Twitter); 
        console.log(data.Facebook.like_count);
 	   alert(data.Twitter);

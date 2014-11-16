@@ -1,16 +1,19 @@
-var expand = function(){
-	$('.story').click(function(){
-		$(this).children('.article').slideToggle(500);
-	});
-	
+function toggleContent(e) {
+	console.log(e.target)
+	var hidden = $(e.target).find('.article');
+	if (hidden.css('display') === 'none') {
+		console.log('it will slide down')
+		hidden.slideDown();
+	} else {
+		hidden.slideUp();
+		console.log('slide back up')
+	}
 }
 
-var hover = function(){
-	$('.story').children('.overlay').hover(
-	function(){
-	   $(this).css({ 'background-color' : 'rgba(0,0,0,0)'});
-	   }, 
-	function(){
-	   $(this).css({ 'background-color' : 'rgba(0,0,0,0.5)'});
-	});
+function mouseEnter() {
+	$(this).find('.overlay').css({ 'background-color' : 'rgba(0,0,0,0)'});
+}
+
+function mouseLeave() {
+	$(this).find('.overlay').css({ 'background-color' : 'rgba(0,0,0,0.5)'});
 }

@@ -2,11 +2,17 @@ function getAllArticles(tagArray) {
   $('.story').hide(0);
   var numselect = 0;
   for (var i = 0; i < tagArray.length; i++) {
-	 if(($(tagArray[i]).hasClass('story '+tagArray[i].id))){
+	  alert(tagArray);
+	  alert(tagArray[i]);
+	  alert((tagArray[i]).id);
+	  alert(tagArray.attr('class'));
+	  alert((tagArray[i]).attr('class'));
+	  /*
+	 if(($(tagArray[i]).hasClass('tags selected'))){
 		    getArticle(tagArray[i].id); 
 			alert('selected statement');
 			numselect = numselect+1;
-	 }
+	 }*/
   }
   if(numselect ==0){
 	  for (var i=0; i<tagArray.length; i++){

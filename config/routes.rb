@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
-  get '/articles' => 'articles#index'
-
-  resources :tags, only: :index do
-    resources :articles, only: :index
-  end
-
+  root 'articles#index'
+  get 'tags/:id/articles' => 'articles#show'
 end

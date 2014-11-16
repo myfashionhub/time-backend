@@ -2,7 +2,9 @@ class TagsController < ApplicationController
 
   def index
     tags = Tag.all
-    render json: tags.to_json
+    respond_to do |format|
+      format.json { render json: tags.to_json, mime_type: Mime::Type["application/json"] }
+    end
   end
 
   private

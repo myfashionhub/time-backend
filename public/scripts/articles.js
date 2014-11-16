@@ -4,11 +4,13 @@ function getAllArticles(tagArray) {
   for (var i = 0; i < tagArray.length; i++) {
 	 if($(tagArray[i]).hasClass('selected')){
 		    getArticle(tagArray[i].id); 
+			alert('selected statement');
 			numselect = numselect+1;
 	 }
   }
   if(numselect ==0){
 	  for (var i=0; i<tagArray.length; i++){
+		  alert('generate all statement');
 		  getArticle(tagArray[i].id);
 	  }
   }

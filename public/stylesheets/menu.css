@@ -6,6 +6,7 @@
   background-color:black;
   text-align:center;
   overflow: hidden;
+  z-index:5;
 }
 
 #logo {

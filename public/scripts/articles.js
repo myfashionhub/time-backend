@@ -56,21 +56,6 @@ function displayArticles(articles) {
 	  "padding":"0px",
 	  "margin":"0px"
     });
-	 title.css({
-	  "font-size":"3em",
-	  "font-family": "Garamond",
-	  "font-weight": "bold",
-	  "position":"relative",
-	  "top":"31%"
-	});
-	tldr.css({
-	  "position":"absolute";
-	  text-align:right;
-	  bottom: 0px;
-	  right:10px;
-	  font-size:2em;
-	  font-family:"Courier New",Courier,serif;
-	  margin-bottom: 0px;
-	});
+
   }
 }

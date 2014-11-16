@@ -1,6 +1,15 @@
 function getAllArticles(tagArray) {
+  var numselect = 0;
   for (var i = 0; i < tagArray.length; i++) {
-    getArticle(tagArray[i].id);
+	 if($(tagArray[i]).hasClass('selected')){
+		    getArticle(tagArray[i].id); 
+			numselect = numselect+1;
+	 }
+  }
+  if(numselect ==0){
+	  for (var i=0; i<tagArray.length; i++){
+		  getArticle(tagArray[i].id);
+	  }
   }
   $.ajax({
 	  success: function(){

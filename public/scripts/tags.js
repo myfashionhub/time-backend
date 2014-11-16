@@ -1,3 +1,5 @@
+var tagsShown = [];
+
 function getTags() {
   $.ajax({
     url: '/tags.json',
@@ -24,14 +26,20 @@ function displayTags(tagArray) {
     }
   }
   $(".tags").click(function(e) {
+    toggleSelectClass(e);
 
     var tagId = $(e.target).attr('data');
-    console.log(tagId)
-    toggleSelectClass(e);
+    tagsShown.push(tagId);
+    console.log(tagsShown)
     $('.story').hide();
-    for (var i=0; i < $('.story').length; i++) {
-      if ($($('.story')[i]).attr('data-tag') === tagId) {
-        $($('.story')[i]).fadeIn();
+
+    for (var j = 0; j < tagsShown.length; j++) {
+      var tagId = tagsShown[j];
+      for (var i=0; i < $('.story').length; i++) {
+        if ($($('.story')[i]).attr('data-tag') === tagId) {
+          console.log($($('.story')[i]).attr('data-tag'))
+          $($('.story')[i]).fadeIn();
+        }
       }
     }
 

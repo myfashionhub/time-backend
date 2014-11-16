@@ -4,7 +4,7 @@ function getAllArticles(tagArray) {
   for (var i = 0; i < tagArray.length; i++) {
 	  /*alert(tagArray[i]);
 	  alert($(tagArray[i]).hasClass('selected'));*/
-	 if(($(tagArray[i]).hasClass('selected'))){
+	 if(($(tagArray[i]).hasClass('tags selected'))){
 		    getArticle(tagArray[i].id); 
 			alert('selected statement');
 			numselect = numselect+1;

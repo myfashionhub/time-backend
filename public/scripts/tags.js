@@ -7,8 +7,6 @@ function getTags() {
     success: function(data) {
       displayTags(data);
       getAllArticles(data);
-	  hover()
-	  expand()
     }
   });
 }

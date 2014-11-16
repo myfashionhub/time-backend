@@ -25,7 +25,7 @@ function getArticle(tag_id) {
 function displayArticles(articles) {
   for (var i = 0; i < articles.length; i++) {
     var article = articles[i];
-	alert('hi');
+	alert(article.url);
 	var minHeight = $.sharedCount(article.url);
 	alert('sup?');
 	var stories = $('.stories');

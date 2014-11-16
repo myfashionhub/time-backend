@@ -52,29 +52,30 @@ body {
 }
 
 .stories div:first-child {
-	border-top: 15px solid rgba(240, 240, 240, 1);
+	border-top: 3px solid rgba(240, 240, 240, 1);
 
-}
-
-.headline {
-	list-style-type: none;
-	text-align: center;
-	position:relative;
-    top:37%;
-    line-height: 1.5em;
 }
 
 .title {
 	font-size:3em;
 	font-family: Garamond;
 	font-weight: bold;
+	position:relative;
+    top:31%;
+	
 
 }
-
+.overlay {
+	position: relative;
+}
 .tldr {
-
+	position: absolute;
+	bottom: 0px;
+	right:10px;
+	font-size: 2em;
+	font-family: "Courier New", Courier, serif;
+	margin-bottom: 0px;
 }
-
 
 .article {
 	display:none;
@@ -183,7 +184,17 @@ body {
 	min-height:200px;
 }
 
+.menubar {
+	position: fixed;
+	top:0px;
+	height: 50px;
+	width: 100%;
+	background-color: black;
+}
 
+#logo {
+	height: 100%;
+}
 
 .footer {
 	position:fixed;

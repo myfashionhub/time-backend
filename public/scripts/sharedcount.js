@@ -1,5 +1,6 @@
 jQuery.sharedCount = function (url, fn) {
  url = encodeURIComponent(url);
+ alert('the url is'+url);
  var domain = "//free.sharedcount.com/"; /* SET DOMAIN */
  var apikey = "0b9f43414d786773d90a6a6fd376247cfe218895" /*API KEY HERE*/
  var arg = {
@@ -62,5 +63,6 @@ function getHeight(article) {
 		var minHeight = '500px';
 	}
 	});
+	alert('the minheight is'+minHeight);
 	return minHeight;
 }

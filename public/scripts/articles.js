@@ -1,3 +1,35 @@
+function css(a) {
+    var sheets = document.styleSheets, o = {};
+    for (var i in sheets) {
+        var rules = sheets[i].rules || sheets[i].cssRules;
+        for (var r in rules) {
+            if (a.is(rules[r].selectorText)) {
+                o = $.extend(o, css2json(rules[r].style), css2json(a.attr('style')));
+            }
+        }
+    }
+    return o;
+}
+
+function css2json(css) {
+    var s = {};
+    if (!css) return s;
+    if (css instanceof CSSStyleDeclaration) {
+        for (var i in css) {
+            if ((css[i]).toLowerCase) {
+                s[(css[i]).toLowerCase()] = (css[css[i]]);
+            }
+        }
+    } else if (typeof css == "string") {
+        css = css.split("; ");
+        for (var i in css) {
+            var l = css[i].split(": ");
+            s[l[0].toLowerCase()] = (l[1]);
+        }
+    }
+    return s;
+}
+
 function getAllArticles(tagArray) {
   for (var i = 0; i < tagArray.length; i++) {
     getArticle(tagArray[i].id);
@@ -37,7 +69,10 @@ function displayArticles(articles) {
 	overlay.append(title).append(tldr);
 	storyDiv.append(overlay).append(articleDiv);
 	stories.append(storyDiv);
-	storyDiv.css({
+	
+	var storyDivStyle = css($(storyDiv));
+	$(storyDiv).css(style);
+	/*storyDiv.css({
 	  "background-image": 'url('+article.img_url+')',
 	  "background-repeat":"no-repeat",
 	  "background-attachment":"center",
@@ -69,6 +104,6 @@ function displayArticles(articles) {
 	  font-size:2em;
 	  font-family:"Courier New",Courier,serif;
 	  margin-bottom: 0px;
-	});
+	}); */
   }
 }

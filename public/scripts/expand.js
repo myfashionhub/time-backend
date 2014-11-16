@@ -1,3 +1,5 @@
 var expand = function(){
-	$('.article').toggle(500);
+	$('.stories div').click(function(){
+		$(this).children('.article').toggle(500)
+	});
 }

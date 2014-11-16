@@ -1,8 +1,6 @@
 function getAllArticles(tagArray) {
 	for (var i=0; i<tagArray.length; i++){
-		if(i==1){
-		  	getArticle(tagArray[i].id);
-		  }
+		  getArticle(tagArray[i].id);
 	  }
   /*$('.story').hide(0);
   var numselect = 0;

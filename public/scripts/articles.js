@@ -55,7 +55,7 @@ function displayArticles(articles) {
 	  "padding":"0px",
 	  "margin":"0px"
     });
-	/*
+	
 	 title.css({
 	  "font-size":"3em",
 	  "font-family": "Garamond",
@@ -71,6 +71,14 @@ function displayArticles(articles) {
 	  "font-size":"2em",
 	  "font-family":"'Courier New',Courier,serif",
 	  "margin-bottom": "0px"
-	});*/
+	});
+	newstext.css({
+	  "margin-left": "20px",
+	  "margin-right": "20px",
+	  "font-size": "1.5em",
+	  "text-align": "left",
+	  "line-height": "170%",
+	  "text-indent": "2em"
+	});
   }
 }

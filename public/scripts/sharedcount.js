@@ -8,13 +8,15 @@ jQuery.sharedCount = function(aurl){
  alert('preajax');
  $.ajax({
   data:{
-	  url:aurl,
+	  url:url,
 	  apikey: apikey
   },
   url:domain + "/url",
   cache:true,
+  type: 'GET',
   dataType: 'json',
   success: function(data){
+  alert(data);
   if(data.Twitter+data.Facebook.share_count < 50) {
 	  alert('setting minheight');
 	  var minHeight = '225px';

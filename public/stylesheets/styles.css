@@ -5,10 +5,6 @@ body {
 	font-weight: 200;
 }
 
-.menubar {
-	
-}
-
 @media all and (max-width: 750px)  {
 	.filterbox {
 		clear: both;
@@ -157,7 +153,7 @@ body {
 	margin:0px;
 }
 
-.newstext {
+.article {
 	display:none;
 }
 /*

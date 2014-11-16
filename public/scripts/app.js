@@ -4,4 +4,5 @@ $(function() {
   getTags();
   clickon();
   clickoff();
+  expand();
 });

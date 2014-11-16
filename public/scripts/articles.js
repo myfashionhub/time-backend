@@ -25,9 +25,7 @@ function getArticle(tag_id) {
 function displayArticles(articles) {
   for (var i = 1; i < articles.length; i++) {
     var article = articles[i];
-	alert(article.url);
-	var minHeight = $.sharedCount(article.url);
-	alert('sup?');
+	/*var minHeight = $.sharedCount(article.url);*/
 	var stories = $('.stories');
     var storyDiv = $('<div>').addClass('story').css('background-image', 'url('+article.img_url+')');
     var storyDiv = $('<div>').addClass('story');
@@ -58,7 +56,6 @@ function displayArticles(articles) {
 	  "-o-background-size": "cover",
 	  "background-size":"100%",
 	  "width":"100%",
-	  "min-height":minHeight,
 	  "text-align":"center",
 	  "font-family":"'Open Sans',Helvetica,Arial,sans-serif",
 	  "color":"white",

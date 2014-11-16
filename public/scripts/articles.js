@@ -23,11 +23,11 @@ function getArticle(tag_id) {
 }
 
 function displayArticles(articles) {
-  for (var i = 0; i < articles.length; i++) {
+  for (var i = 1; i < articles.length; i++) {
     var article = articles[i];
-	alert(article.url);
+	/*alert(article.url);
 	var minHeight = $.sharedCount(article.url);
-	alert('sup?');
+	alert('sup?');*/
 	var stories = $('.stories');
     var storyDiv = $('<div>').addClass('story').css('background-image', 'url('+article.img_url+')');
     var storyDiv = $('<div>').addClass('story');

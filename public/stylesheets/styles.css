@@ -170,7 +170,7 @@ body {
 */
 .overlay1 {
 	width:100%;
-	background-color:rgba(0,0,0.5);
+	background-color:rgba(0,0,0,0.5);
 	height: 300px;
 }
 
@@ -181,7 +181,7 @@ body {
 
 .overlay2 {
 	width:100%;
-	background-color:rgba(0,0,0.5);
+	background-color:rgba(0,0,0,0.5);
 	height:100px;
 }
 
@@ -191,7 +191,7 @@ body {
 
 .overlay3 {
 	width:100%;
-	background-color:rgba(0,0,0.5);
+	background-color:rgba(0,0,0,0.5);
 	height:500px;
 }
 
@@ -201,7 +201,7 @@ body {
 
 .overlay4 {
 	width:100%;
-	background-color:rgba(0,0,0.5);
+	background-color:rgba(0,0,0,0.5);
 	height:200px;
 }
 
@@ -211,7 +211,7 @@ body {
 
 .overlay5 {
 	width:100%;
-	background-color:rgba(0,0,0.5);
+	background-color:rgba(0,0,0,0.5);
 	height:100px;
 }
 
@@ -221,7 +221,7 @@ body {
 
 .overlay6 {
 	width:100%;
-	background-color:rgba(0,0,0.5);
+	background-color:rgba(0,0,0,0.5);
 	height:200px;
 }
 
@@ -311,4 +311,3 @@ body {
 .footer .nav ul li a:hover{
 	color:white;
 } 
-

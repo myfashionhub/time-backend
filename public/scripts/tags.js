@@ -33,8 +33,28 @@ function toggleSelectClass(e) {
   var tagClass = tag.attr('class');
   if (tagClass.indexOf(' selected') > -1) {
     tag.removeClass('selected').addClass('unselected');
+	$.ajax({
+    url: '/tags.json',
+    type: 'GET',
+    dataType: 'json',
+    contentType: 'application/json',
+    success: function(data) {
+		alert(data);
+      getAllArticles(data);
+    }
+  });
   } else {
     tag.removeClass('unselected').addClass('selected');
+	$.ajax({
+    url: '/tags.json',
+    type: 'GET',
+    dataType: 'json',
+    contentType: 'application/json',
+    success: function(data) {
+		alert(data);
+      getAllArticles(data);
+	}
+  });
   }
 }
 

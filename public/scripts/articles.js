@@ -68,7 +68,7 @@ function displayArticles(articles) {
 	  "text-align":"right",
 	  "bottom": "0px",
 	  "right":"10px",
-	  "font-size":"2em",
+	  "font-size":"1em",
 	  "font-family":"'Courier New',Courier,serif",
 	  "margin-bottom": "0px"
 	});

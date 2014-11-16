@@ -2,8 +2,12 @@ function getAllArticles(tagArray) {
   for (var i = 0; i < tagArray.length; i++) {
     getArticle(tagArray[i].id);
   }
-  hover()
-  expand()
+  $.ajax({
+	  success: function(){
+		hover()
+		expand();
+	  }
+  });
 }
 
 function getArticle(tag_id) {

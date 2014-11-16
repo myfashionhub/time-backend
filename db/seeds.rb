@@ -36,8 +36,8 @@ articles.each do |article|
   })
 end
 
-Article.find(1).tags << Tag.find(4)
-Article.find(1).tags << Tag.find(11)
+#Article.find(1).tags << Tag.find(4)
+#Article.find(1).tags << Tag.find(11)
 Article.find(2).tags << Tag.find(10)
 Article.find(2).tags << Tag.find(7)
 Article.find(3).tags << Tag.find(10)
@@ -98,7 +98,7 @@ Article.find(38).tags << Tag.find(10)
 Article.find(39).tags << Tag.find(10)
 Article.find(40).tags << Tag.find(10)
 
-Article.find(1).update({:img_url => 'http://timedotcom.files.wordpress.com/2014/11/bottles-of-alcohol.jpg?w=814'})
+#Article.find(1).update({:img_url => 'http://timedotcom.files.wordpress.com/2014/11/bottles-of-alcohol.jpg?w=814'})
 Article.find(2).update({:img_url => 'http://i.imgur.com/gp1uBza.jpg'})
 Article.find(3).update({:img_url => 'http://i.imgur.com/pWpplfq.jpg'})
 Article.find(4).update({:img_url => 'http://timedotcom.files.wordpress.com/2014/11/saudi-microbiologist-hosam-zowawi.jpg?w=1100'})

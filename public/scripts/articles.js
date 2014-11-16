@@ -110,7 +110,6 @@ function displayArticles(article) {
 	  "line-height": "170%",
 	  "text-indent": "2em"
 	});
-  }
 }
 /*
 function removeArticle(tag_id) {

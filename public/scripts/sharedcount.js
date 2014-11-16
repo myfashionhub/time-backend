@@ -16,6 +16,7 @@ function sharedCount(url, fn) {
  arg.success = fn;
  }
  else {
+	 alert("what is happening??");
  var cb = "sc_" + url.replace(/\W/g, '');
  window[cb] = fn;
  arg.jsonpCallback = cb;
@@ -48,7 +49,7 @@ function getUrl(tag_id) {
 function getHeight(article) {
 	alert('getting height...');
 	sharedCount(article.url, function(data){
-	alert("inside the sharedcount method in getheight");
+	alert("inside the fn method in getheight");
 	if(data.Twitter+data.Facebook.share_count < 50) {
 		alert('minheight here');
 		var minHeight = '225px';

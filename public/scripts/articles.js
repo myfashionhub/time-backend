@@ -1,18 +1,22 @@
 function getAllArticles(tagArray) {
-  $('.story').hide(0);
+	for (var i=0; i<tagArray.length; i++){
+		  alert('generate all statement');
+		  getArticle(tagArray[i].id);
+	  }
+  /*$('.story').hide(0);
   var numselect = 0;
   for (var i = 0; i < tagArray.length; i++) {
-	  alert(tagArray.toString());
+	  alert(tagArray);
 	  alert(tagArray[i]);
 	  alert((tagArray[i]).id);
 	  alert(tagArray.attr('class'));
 	  alert((tagArray[i]).attr('class'));
-	  /*
+	  
 	 if(($(tagArray[i]).hasClass('tags selected'))){
 		    getArticle(tagArray[i].id); 
 			alert('selected statement');
 			numselect = numselect+1;
-	 }*/
+	 }
   }
   if(numselect ==0){
 	  for (var i=0; i<tagArray.length; i++){
@@ -25,7 +29,7 @@ function getAllArticles(tagArray) {
 		hover()
 		expand();
 	  }
-  });
+  });*/
 }
 
 function getArticle(tag_id) {

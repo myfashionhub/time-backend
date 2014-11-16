@@ -1,13 +1,10 @@
 function getAllArticles(tagArray) {
+  $('.story').hide(0);
   var numselect = 0;
   for (var i = 0; i < tagArray.length; i++) {
 	 if($(tagArray[i]).hasClass('selected')){
 		    getArticle(tagArray[i].id); 
 			numselect = numselect+1;
-	 }
-	 
-	 else {
-		 $(document.getElementsByClassName(tagArray[i].id)).hide(0);
 	 }
   }
   if(numselect ==0){

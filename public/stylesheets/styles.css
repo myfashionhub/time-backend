@@ -141,6 +141,7 @@ body {
 
 .title {
 	font-size:3em;
+	vertical-align:middle;
 	padding:0px;
 	margin:0px;
 	z-index:5;
@@ -149,6 +150,7 @@ body {
 
 .tldr {
 	font-size:1em;
+	vertical-align:middle;
 	padding:0px;
 	margin:0px;
 }

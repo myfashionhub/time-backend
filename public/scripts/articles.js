@@ -2,7 +2,7 @@ function getAllArticles(tagArray) {
   $('.story').hide(0);
   var numselect = 0;
   for (var i = 0; i < tagArray.length; i++) {
-	 if(($(tagArray[i]).hasClass('tags selected'))){
+	 if(($(tagArray[i]).hasClass('story '+tagArray[i].id))){
 		    getArticle(tagArray[i].id); 
 			alert('selected statement');
 			numselect = numselect+1;

@@ -1,5 +1,5 @@
 body {
-	background-color: #FFFFFF;
+	background-color: rgba(240, 240, 240, 1);
 	font-family: "Helvetica-Neue", Helvetica, sans-serif;
 	font-size: 12px;
 	font-weight: 200;
@@ -13,6 +13,7 @@ body {
 		width: 100% !important;
 		left: 0px !important;
 		background-color: rgba(230, 230, 230, 1) !important;
+		z-index: 5;
 	}
 
 	.tag_area {
@@ -28,14 +29,6 @@ body {
 	}
 }
 
-.clear_button {
-	position: absolute;
-	top: 15px;
-	right: 50px;
-	display: none;
-	opacity: 0.5;
-}
-
 
 /* STORIES */
 .stories {
@@ -44,7 +37,7 @@ body {
 
 .stories div{
 	/*background-image:url(~~~~~~~~~~~)*/
-	background-repeat:center;
+	background-repeat:no-repeat;
 	background-attachment:center;
 	background-position:center;
 	-webkit-background-size: cover;
@@ -58,40 +51,54 @@ body {
 	color:white;
 	vertical-align:middle;
 	padding:0px;
-	margin-top: 150px;
 	margin:0px;
 }
 
 .stories div:first-child {
-	border-top: 10px solid white;
+	border-top: 15px solid rgba(240, 240, 240, 1);
+
 }
+
 
 .title {
 	font-size:3em;
-	padding:0px;
-	margin:0px;
-	z-index:5;
+	margin-top:15px;
 	color:white;
+
 }
 
 .tldr {
-	font-size:1em;
-	padding:0px;
-	margin:0px;
+	margin-top: -25px;
 }
 
 .article {
 	display:none;
-	background-color:rgba(56,56,56,1);
-	border-top: 5px solid rgba(56,56,56,1);
-	border-bottom: 5px solid rgba(56,56,56,1);
+	background-color:rgba(28, 28, 28, 1);
+	border-top: 5px solid rgba(28, 28, 28, 1);
+	border-bottom: 5px solid rgba(28, 28, 28, 1);
 
 }
 .article p {
 	margin-left: 20px;
 	margin-right: 20px;
-	font-size: 1.25em;
+	font-size: 1.5em;
 	text-align: left;
+	line-height: 170%;
+	text-indent: 2em;
+}
+
+.share {
+	text-align: right;
+}
+
+.share ul li {
+	display: inline;
+
+}
+.share ul li a img{
+	height: 10px;
+	width:10px;
+
 }
 
 #overlay1 {
@@ -214,6 +221,7 @@ body {
   	padding-right:0.5em;
   	padding-bottom:5px;
 }
+
 .footer .nav ul li a {
 	font-size:1em;
   	color:rgb(224, 224, 224);
@@ -221,6 +229,7 @@ body {
   	text-transform:uppercase;
   	font-family:'Open Sans', sans-serif;
  }
+
 .footer .nav ul li a:hover{
 	color:white;
 }

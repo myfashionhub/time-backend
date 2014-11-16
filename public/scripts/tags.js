@@ -1,8 +1,9 @@
 function getTags() {
   $.ajax({
-    url: 'http://time-back.herokuapp.com/tags',
+    url: '/tags',
     type: 'GET',
     dataType: 'jsonp',
+    contentType: 'application/json',
     success: function(data) {
       displayTags(data);
     }

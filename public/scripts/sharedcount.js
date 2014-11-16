@@ -28,20 +28,26 @@ $.sharedCount(location.href, function(data){
 });
 
 function getHeight(url) {
+	alert('beginning of getheight function');
 	sharedCount(url, function(data){
 	if(data.Twitter+data.Facebook.share_count < 50) {
+		alert('setting minheight');
 		var minHeight = '225px';
 	}
 	else if(data.Twitter+data.Facebook.share_count < 100) {
+		alert('setting minheight');
 		var minHeight = '275px';
 	}
 	else if(data.Twitter+data.Facebook.share_count < 150) {
+		alert('setting minheight');
 		var minHeight = '325px';
 	}
 	else if(data.Twitter+data.Facebook.share_count < 200) {
+		alert('setting minheight');
 		var minHeight = '475px';
 	}
 	else {
+		alert('setting minheight');
 		var minHeight = '500px';
 	}
 	return minHeight;

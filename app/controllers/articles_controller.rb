@@ -4,6 +4,12 @@ class ArticlesController < ApplicationController
     render json: articles.to_json
   end
 
+  def show
+    @tag = Tag.find(params[:id])
+    articles = @tag.articles
+    render json: articles.to_json
+  end
+
   private
 
   def article_params

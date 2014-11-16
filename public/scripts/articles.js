@@ -1,13 +1,16 @@
 function getAllArticles(tagArray) {
+  var numselect = 0;
+  for (var i = 0; i < tagArray.length; i++) {
+	  getArticle(tagArray[i].id);
+	}
+
   $('.story').hide();
   var numselect = 0;
   for (var i = 0; i < tagArray.length; i++) {
-	  /*
 	 if(($(tagArray[i]).hasClass('tags selected'))){
-		    getArticle(tagArray[i].id);
-			alert('selected statement');
+		  getArticle(tagArray[i].id);
 			numselect = numselect+1;
-	 }*/
+	 }
   }
   if(numselect ==0){
 	  for (var i=0; i<tagArray.length; i++){

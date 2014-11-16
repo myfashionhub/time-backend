@@ -39,7 +39,6 @@ function toggleSelectClass(e) {
     dataType: 'json',
     contentType: 'application/json',
     success: function(data) {
-		alert(data);
       getAllArticles(data);
     }
   });
@@ -51,9 +50,8 @@ function toggleSelectClass(e) {
     dataType: 'json',
     contentType: 'application/json',
     success: function(data) {
-		alert(data);
       getAllArticles(data);
-	}
+	  }
   });
   }
 }

@@ -25,6 +25,7 @@ function getArticle(tag_id) {
 function displayArticles(articles) {
   for (var i = 0; i < articles.length; i++) {
     var article = articles[i];
+	alert('hi');
 	var minHeight = getHeight(article[i]);
 	alert(minHeight);
 	var stories = $('.stories');

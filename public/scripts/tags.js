@@ -33,10 +33,26 @@ function toggleSelectClass(e) {
   var tagClass = tag.attr('class');
   if (tagClass.indexOf(' selected') > -1) {
     tag.removeClass('selected').addClass('unselected');
-	getTags();
+	$.ajax({
+    url: '/tags.json',
+    type: 'GET',
+    dataType: 'json',
+    contentType: 'application/json',
+    success: function(data) {
+      getAllArticles(data);
+    }
+  });
   } else {
     tag.removeClass('unselected').addClass('selected');
-	getTags();
+	$.ajax({
+    url: '/tags.json',
+    type: 'GET',
+    dataType: 'json',
+    contentType: 'application/json',
+    success: function(data) {
+      getAllArticles(data);
+	}
+  });
   }
 }
 

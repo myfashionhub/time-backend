@@ -2,7 +2,7 @@ function getAllArticles(tagArray) {
   $('.story').hide(0);
   var numselect = 0;
   for (var i = 0; i < tagArray.length; i++) {
-	 alert(tagArray[i].attr('class'));
+	 /*alert(tagArray[i].attr('class'));*/
 	 if(($(tagArray[i]).hasClass('selected'))){
 		    getArticle(tagArray[i].id); 
 			alert('selected statement');

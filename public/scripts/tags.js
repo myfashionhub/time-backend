@@ -40,11 +40,12 @@ function toggleSelectClass(e) {
     contentType: 'application/json',
     success: function(data) {
 		alert(data);
-      getAllArticles(data);
+      /*getAllArticles(data);*/
     }
   });
   } else {
     tag.removeClass('unselected').addClass('selected');
+	var id = tag.id
 	$.ajax({
     url: '/tags.json',
     type: 'GET',

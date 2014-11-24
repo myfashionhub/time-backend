@@ -23,7 +23,8 @@
   width: 100% !important;
   margin: 0px;
   height: 8.5em;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   z-index:5;
 }
 

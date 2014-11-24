@@ -13,13 +13,30 @@ module GoogleFeed
       publication = feed[:publication]
 
       feed_content[:entries].each do |entry|
-        extract = entry[:content] || entry[:content_snippet]
+        puts entry
+        extract = entry[:content_snippet]
+        text = entry[:content]
+        begin
+          img_url = entry[:media_groups][0][:contents][0][:url] 
+          categories = entry[:categories] || entry[:media_groups][0][:contents][0][:keywords]
+          puts categories if !categories.empty?
+        rescue 
+          img_url = ''
+        end
+
+        unless img_url == ''
+          ext = img_url.index('.jpg')
+          img_url = img_url[0, ext + 4] if ext != nil
+        end
+
         articles.push({
           publication: publication,
           title: entry[:title],
           url: entry[:link],
           date_published: entry[:published_date],
-          extract: extract
+          extract: extract,
+          text: text, 
+          img_url: img_url
         })
       end
     end

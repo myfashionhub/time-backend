@@ -26,8 +26,19 @@ articles.each do |article|
     title: article[:title],
     publication: article[:publication],
     extract: article[:extract],
+    text: article[:text],
+    img_url: article[:img_url],
     date: article[:date_published]
   })
+  current_article = Article.find_by(url: article[:url])
+  current_article.update({
+    title: article[:title],
+    publication: article[:publication],
+    extract: article[:extract],
+    text: article[:text],
+    img_url: article[:img_url],
+    date: article[:date_published]
+  })  
 end
 
 # Dedupe articles in tags

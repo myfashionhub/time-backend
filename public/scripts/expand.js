@@ -8,7 +8,7 @@ function toggleContent(e) {
 }
 
 function mouseEnter() {
-	$(this).find('.overlay').css({ 'background-color' : 'rgba(0,0,0,0)'});
+	$(this).find('.overlay').css({ 'background-color' : 'rgba(0,0,0,0.2)'});
 }
 
 function mouseLeave() {

@@ -1,0 +1,92 @@
+/* STORIES */
+.stories {
+    margin-top:13.5em;
+}
+
+.story{
+    background-repeat:no-repeat;
+    background-attachment:center;
+    background-position:top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:100%;
+    width:100%;
+    /*height:~~~~~~~~~~~~*/
+    text-align:center;
+    font-family:'Open Sans',Helvetica,Arial,sans-serif;
+    color:white;
+    vertical-align:middle;
+    padding:0px;
+    margin:0px;
+    z-index:-1;
+}
+
+.story:first-child {
+    border-top: 3px solid rgba(240, 240, 240, 1);
+
+}
+
+
+.title {
+    font-size:3em;
+    font-family: Garamond;
+    font-weight: bold;
+    position:relative;
+    top:1em;
+}
+
+.tldr {
+    position:absolute;
+    text-align:right;
+    bottom: 0px;
+    right:10px;
+    font-size:2em;
+    font-family:"Courier New",Courier,serif;
+    margin-bottom: 15px;
+}
+
+.overlay {
+    width:100%;
+    background-color:rgba(0,0,0,.5);
+    position:relative;
+    height:200px;
+    z-index:4;
+}
+
+
+.article {
+    display:none;
+    background-color:rgba(28, 28, 28, 1);
+    border-top: 10px solid rgba(28, 28, 28, 1);
+    border-bottom: 5px solid rgba(28, 28, 28, 1);
+
+}
+
+.newstext {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.5em;
+    text-align: left;
+    line-height: 170%;
+    text-indent: 2em;
+}
+
+.share ul {
+    list-style-type: none;
+}
+.share li {
+    display: inline;
+    padding-right: 10px;
+
+}
+.share li a i:hover {
+    color:white;
+}
+
+.share li a i {
+    font-size: 2em;
+    color:rgba(224, 224, 224,1);
+}
+
+

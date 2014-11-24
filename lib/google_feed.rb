@@ -16,19 +16,18 @@ module GoogleFeed
         puts entry
         extract = entry[:content_snippet]
         text = entry[:content]
+
         begin
           img_url = entry[:media_groups][0][:contents][0][:url] 
           categories = entry[:categories] || entry[:media_groups][0][:contents][0][:keywords]
-          puts categories if !categories.empty?
         rescue 
           img_url = ''
         end
 
-        unless img_url == ''
-          ext = img_url.index('.jpg')
-          img_url = img_url[0, ext + 4] if ext != nil
-        end
-
+        # Eliminate w=50 param at the end
+        ext = img_url.index('.jpg')
+        img_url = img_url[0, ext + 4] if ext != nil
+        
         articles.push({
           publication: publication,
           title: entry[:title],

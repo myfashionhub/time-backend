@@ -27,9 +27,10 @@ function displayArticles(articles, tag_id, numTags) {
     .attr('data-tag', tag_id).css('background-image', 'url('+article.img_url+')');
   	var overlay = $('<div>').addClass('overlay');
   	var title = $('<p>').addClass('title').html(article.title)
-  	var tldr = $('<p>').addClass('tldr').html('Placeholder tldr text');
+  	var tldr = $('<p>').addClass('tldr').html(article.extract+' - '+article.publication);
+
   	var articleDiv = $('<div>').addClass('article');
-  	var newstext = $('<div>').addClass('newstext').html(article.extract);
+  	var newstext = $('<div>').addClass('newstext').html(article.text);
   	var sharelist = $('<ul>').addClass('share');
   	var fbLi = $('<li>').html('<a href=""><i class="fa fa-facebook"></i></a>');
   	var twitterLi = $('<li>').html('<a href=""><i class="fa fa-twitter"></i></a>');

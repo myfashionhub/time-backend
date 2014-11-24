@@ -14,6 +14,9 @@ class Article < ActiveRecord::Base
       { url: 'http://time.com/newsfeed/feed/',
         publication: 'Time Magazine'
       },
+      { url: 'http://feeds2.feedburner.com/time/world',
+        publication: 'Time Magazine'
+      },
       { url: 'http://rss.cnn.com/rss/money_latest.rss',
         publication: 'Fortune'
       },

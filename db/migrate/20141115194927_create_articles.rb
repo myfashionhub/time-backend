@@ -5,6 +5,8 @@ class CreateArticles < ActiveRecord::Migration
       t.string :title
       t.string :publication
       t.text :extract
+      t.text :text
+      t.string :img_url
       t.string :date
 
       t.timestamps

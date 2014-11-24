@@ -31,16 +31,15 @@ articles.each do |article|
 end
 
 # Dedupe articles in tags
-Tag.all.each do |tag|
-  articles = tag.articles
-  article_ids = articles.map do |article| 
-    article.id
-  end
-  article_ids = article_ids.uniq
-  puts article_ids
+# Tag.all.each do |tag|
+#   articles = tag.articles
+#   article_ids = articles.map do |article| 
+#     article.id
+#   end
+#   article_ids = article_ids.uniq
 
-  tag.articles.delete_all
-  article_ids.each do |article_id|
-    tag.articles << Article.find(article_id)
-  end
-end
+#   tag.articles.delete_all
+#   article_ids.each do |article_id|
+#     tag.articles << Article.find(article_id)
+#   end
+# end

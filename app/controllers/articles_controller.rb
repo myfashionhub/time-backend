@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
 
   def show
     @tag = Tag.find(params[:id])
-    articles = @tag.articles
+    articles = @tag.articles.take(10)
     render json: articles.to_json
   end
 

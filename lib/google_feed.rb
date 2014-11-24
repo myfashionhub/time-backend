@@ -11,15 +11,14 @@ module GoogleFeed
     feeds.each do |feed|
       feed_content = GoogleAjax::Feed.load(URI::encode(feed[:url]), {num: 10})
       publication = feed[:publication]
+      categories = feed[:categories]
 
       feed_content[:entries].each do |entry|
-        puts entry
         extract = entry[:content_snippet]
         text = entry[:content]
 
         begin
           img_url = entry[:media_groups][0][:contents][0][:url] 
-          categories = entry[:categories] || entry[:media_groups][0][:contents][0][:keywords]
         rescue 
           img_url = ''
         end
@@ -35,7 +34,8 @@ module GoogleFeed
           date_published: entry[:published_date],
           extract: extract,
           text: text, 
-          img_url: img_url
+          img_url: img_url,
+          categories: categories
         })
       end
     end

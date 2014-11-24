@@ -30,6 +30,8 @@ articles.each do |article|
     img_url: article[:img_url],
     date: article[:date_published]
   })
+
+  # Update existing articles
   current_article = Article.find_by(url: article[:url])
   current_article.update({
     title: article[:title],
@@ -38,7 +40,13 @@ articles.each do |article|
     text: article[:text],
     img_url: article[:img_url],
     date: article[:date_published]
-  })  
+  }) 
+
+  Tag.all.each do |tag|
+    if tag.name.downcase === article[:categories][0]
+      tag.articles << current_article
+    end
+  end 
 end
 
 # Dedupe articles in tags

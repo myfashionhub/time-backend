@@ -67,10 +67,18 @@ class Article < ActiveRecord::Base
         publication: 'People', 
         categories: ['entertainment']
       },
-      { url: 'http://feeds.ew.com/entertainmentweekly/latest',
+      { url: 'http://feeds.ew.com/entertainmentweekly/music-mix',
+        publication: 'Entertainment Weekly',
+        categories: ['art']        
+      },      
+      { url: 'http://rss.ew.com/web/ew/rss/media/tv/index.xml',
         publication: 'Entertainment Weekly',
         categories: ['entertainment']        
-      }
+      },      
+      { url: 'http://feeds.ew.com/entertainmentweekly/shelf-life',
+        publication: 'Entertainment Weekly',
+        categories: ['art']        
+      }            
     ]
   end
 

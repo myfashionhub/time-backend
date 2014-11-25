@@ -3,19 +3,18 @@
     margin-top:13.5em;
 }
 
-.story{
+.story {
     background-repeat:no-repeat;
     background-attachment:center;
     background-position:top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size:100%;
+    background-size: 100%;
     width:100%;
-    text-align:center;
     font-family:'Open Sans',Helvetica,Arial,sans-serif;
     color: #fff;
-    vertical-align:middle;
+    background-color: #333;
     padding: 0;
     margin: 0;
     z-index: -1;
@@ -27,7 +26,7 @@
     position: relative;
     padding: 0 1em;
     overflow: auto;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.7);
     border-top: 1px solid #ccc;
 }
 
@@ -37,6 +36,7 @@
     font-weight: bold;
     position:relative;
     margin-top: 2%;
+    text-align: center;
 }
 
 .tldr {
@@ -55,9 +55,8 @@
 
 .article {
     display: none;
-    background-color: rgba(28, 28, 28, 1);
-    border-top: 10px solid rgba(28, 28, 28, 1);
-    border-bottom: 5px solid rgba(28, 28, 28, 1);
+    background-color: rgba(28, 28, 28, .85);
+    padding: 10px 0;
 }
 
 .newstext {
@@ -72,13 +71,18 @@
 .share ul {
     list-style-type: none;
 }
+
 .share li {
     display: inline;
     padding-right: 10px;
-
 }
+
+.share {
+    text-align: center;
+}
+
 .share li a i:hover {
-    color:white;
+    color: #fff;
 }
 
 .share li a i {

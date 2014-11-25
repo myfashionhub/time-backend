@@ -39,15 +39,11 @@ function displayArticles(articles, tag_id, numTags) {
   	articleDiv.append(newstext).append(sharelist);
   	overlay.append(title).append(tldr);
   	storyDiv.append(overlay).append(articleDiv);
-
   	stories.append(storyDiv);
-  	storyDiv.css({
-  	  "background-image": 'url('+article.img_url+')'
-      });
   }
 
   tagArticlesLoaded += 1;
-  $('.story').hover(mouseEnter, mouseLeave);
+  $('.overlay').hover(mouseEnter, mouseLeave);
 
   if (tagArticlesLoaded === numTags) {
     $('.story').click(toggleContent);

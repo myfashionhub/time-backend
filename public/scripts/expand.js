@@ -5,15 +5,15 @@ function toggleContent(e) {
 	if (hidden.css('display') === 'none') {
 		hidden.slideDown();
 	} else {
-    console.log('slide up')
 		hidden.slideUp();
 	}
 }
 
 function mouseEnter() {
-  $(this).find('.overlay').css({'background-color': 'rgba(0,0,0,0.2)'});
+  $(this).css({'background-color': 'rgba(0,0,0,0.3)'});
+
 }
 
 function mouseLeave() {
-  $(this).find('.overlay').css({'background-color': 'rgba(0,0,0,0.5)'});
+  $(this).css({'background-color': 'rgba(0,0,0,0.65)'});
 }

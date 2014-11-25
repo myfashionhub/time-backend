@@ -39,15 +39,11 @@ function displayArticles(articles, tag_id, numTags) {
   	articleDiv.append(newstext).append(sharelist);
   	overlay.append(title).append(tldr);
   	storyDiv.append(overlay).append(articleDiv);
+
   	stories.append(storyDiv);
-  	var storyfirstchild=$(storyDiv).children(':first-child');
   	storyDiv.css({
   	  "background-image": 'url('+article.img_url+')'
       });
-
-  	storyfirstchild.css({
-  		"border-top": "3px solid rgba(240, 240, 240, 1)"
-	  });
   }
 
   tagArticlesLoaded += 1;

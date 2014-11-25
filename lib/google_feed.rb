@@ -18,22 +18,26 @@ module GoogleFeed
         text = entry[:content]
 
         begin
-          img_url = entry[:media_groups][0][:contents][0][:url] 
-        rescue 
+          if publication == 'People'
+            img_url = text.match(/http:\/\/.+.jpg/)[0]
+          else
+            img_url = entry[:media_groups][0][:contents][0][:url]
+          end
+        rescue
           img_url = ''
         end
 
         # Eliminate w=50 param at the end
         ext = img_url.index('.jpg')
         img_url = img_url[0, ext + 4] if ext != nil
-        
+
         articles.push({
           publication: publication,
           title: entry[:title],
           url: entry[:link],
           date_published: entry[:published_date],
           extract: extract,
-          text: text, 
+          text: text,
           img_url: img_url,
           categories: categories
         })

@@ -25,6 +25,7 @@ function displayTags(tagArray) {
       tagLi.appendTo($('.tag_area .row2'));
     }
   }
+
   $(".tags").click(function(e) {
     toggleSelectClass(e);
 

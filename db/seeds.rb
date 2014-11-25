@@ -40,19 +40,21 @@ articles.each do |article|
     text: article[:text],
     img_url: article[:img_url],
     date: article[:date_published]
-  }) 
+  })
 
   Tag.all.each do |tag|
     if tag.name.downcase === article[:categories][0]
-      tag.articles << current_article
+      unless tag.articles.include?(current_article)
+        tag.articles << current_article
+      end
     end
-  end 
+  end
 end
 
 # Dedupe articles in tags
 # Tag.all.each do |tag|
 #   articles = tag.articles
-#   article_ids = articles.map do |article| 
+#   article_ids = articles.map do |article|
 #     article.id
 #   end
 #   article_ids = article_ids.uniq
@@ -60,5 +62,12 @@ end
 #   tag.articles.delete_all
 #   article_ids.each do |article_id|
 #     tag.articles << Article.find(article_id)
+#   end
+# end
+
+# Delete articles w empty text or extract
+# Tag.all.each do |tag|
+#   tag.articles.each do |article|
+#     article.delete if article.text == nil || article.extract == nil
 #   end
 # end

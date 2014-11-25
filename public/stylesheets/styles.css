@@ -3,6 +3,7 @@ body {
 	font-family: "Helvetica-Neue", Helvetica, sans-serif;
 	font-size: 12px;
 	font-weight: 200;
+	overflow-y: hidden;
 }
 
 @media all and (max-width: 750px)  {
@@ -31,15 +32,24 @@ body {
 }
 
 
-.footer {
+.wrapper {
+	max-height: 100%;
+	overflow-y: scroll;
+	margin-top: 15%;
+	margin-bottom: -30px; /* Footer height */
+}
+
+/* FOOTER */
+footer {
 	position:fixed;
-	bottom:0px;
-	height:30px;
-	width:100%;
-	background-color:black;
+	bottom: 0;
+	height: 30px;
+	width: 100%;
+	background-color: #000;
 
 }
-.footer p {
+
+footer p {
 	float:left;
 	color:rgb(224, 224, 224);
 	margin-left:10px;
@@ -48,20 +58,21 @@ body {
 	font-size: 0.75em;
 	padding-top: 10px;
 }
-.footer .nav ul {
+
+footer .nav ul {
 	float:right;
 	margin-right:10px;
 	margin-top:7px;
 }
 
-.footer .nav ul li {
+footer .nav ul li {
 	display:inline;
 	padding-left:0.5em;
   	padding-right:0.5em;
   	padding-bottom:5px;
 }
 
-.footer .nav ul li a {
+footer .nav ul li a {
 	font-size:1em;
   	color:rgb(224, 224, 224);
   	text-decoration:none;
@@ -69,6 +80,6 @@ body {
   	font-family:'Open Sans', sans-serif;
  }
 
-.footer .nav ul li a:hover{
-	color:white;
+footer .nav ul li a:hover{
+	color: #fff;
 }

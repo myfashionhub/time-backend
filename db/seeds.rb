@@ -68,6 +68,6 @@ end
 # Delete articles w empty text or extract
 Tag.all.each do |tag|
   tag.articles.each do |article|
-    article.delete if article.text == nil || article.extract == nil
+    article.delete if article.text == nil || article.extract == nil || article.img_url.empty?
   end
 end

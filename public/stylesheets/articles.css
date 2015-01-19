@@ -62,18 +62,21 @@
 }
 
 .article {
-    display: none;
-    background-color: rgba(0, 0, 0, .65);
-    padding: 10px 0;
+  display: none;
+  background-color: rgba(0, 0, 0, .65);
+  padding: 10px 0;
 }
 
 .newstext {
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 1.5em;
-    text-align: left;
-    line-height: 170%;
-    text-indent: 2em;
+  margin: 0 20px;
+  font-size: 1.5em;
+  text-align: left;
+  line-height: 170%;
+  text-indent: 2em;
+}
+
+.newstext span {
+  color: #fff !important;
 }
 
 .share ul {

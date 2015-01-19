@@ -13,13 +13,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
-
-$.ajax({
-  url: 'http://time-back.herokuapp.com',
-  type: 'GET',
-  dataType:  'json',
-  success: function(data) {
-    console.log(data)
-  }
-})

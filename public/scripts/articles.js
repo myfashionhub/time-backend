@@ -22,22 +22,24 @@ function displayArticles(articles, tag_id, numTags) {
   for (var i = 1; i < articles.length; i++) {
     var article = articles[i];
   	/*var minHeight = $.sharedCount(article.url);*/
-  	var stories = $('.stories');
+  	var stories  = $('.stories');
     var storyDiv = $('<div>').addClass('story '+article.id)
-    .attr('data-tag', tag_id).css('background-image', 'url('+article.img_url+')');
-  	var overlay = $('<div>').addClass('overlay');
-  	var title = $('<p>').addClass('title').html(article.title)
-  	var tldr = $('<p>').addClass('tldr').html(article.extract+' - '+article.publication);
+                    .attr('data-tag', tag_id).css('background-image', 'url('+article.img_url+')');
+  	var overlay  = $('<div>').addClass('overlay');
+    var link     = $('<a>').attr('href', article.url).addClass('title').attr('target', '_blank');
+  	var title    = $('<h3>').html(article.title);
+  	var tldr     = $('<p>').addClass('tldr').html(article.extract+' - '+article.publication);
 
-  	var articleDiv = $('<div>').addClass('article');
-  	var newstext = $('<div>').addClass('newstext').html(article.text);
-  	var sharelist = $('<ul>').addClass('share');
-  	var fbLi = $('<li>').html('<a href=""><i class="fa fa-facebook"></i></a>');
-  	var twitterLi = $('<li>').html('<a href=""><i class="fa fa-twitter"></i></a>');
-  	var linkLi = $('<li>').html('<a href=""><i class="fa fa-link"></i></a>');
+  	var articleDiv  = $('<div>').addClass('article');
+  	var newstext    = $('<div>').addClass('newstext').html(article.text);
+  	var sharelist   = $('<ul>').addClass('share');
+  	var fbLi        = $('<li>').html('<a href=""><i class="fa fa-facebook"></i></a>');
+  	var twitterLi   = $('<li>').html('<a href=""><i class="fa fa-twitter"></i></a>');
+  	var linkLi      = $('<li>').html('<a href=""><i class="fa fa-link"></i></a>');
   	sharelist.append(fbLi).append(twitterLi).append(linkLi);
   	articleDiv.append(newstext).append(sharelist);
-  	overlay.append(title).append(tldr);
+    link.wrapInner(title);
+  	overlay.append(link).append(tldr);
   	storyDiv.append(overlay).append(articleDiv);
   	stories.append(storyDiv);
   }

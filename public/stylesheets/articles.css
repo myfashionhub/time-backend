@@ -31,12 +31,20 @@
 }
 
 .title {
-    font-size: 3em;
-    font-family: Garamond;
-    font-weight: bold;
-    position:relative;
-    margin-top: 2%;
-    text-align: center;
+  position:relative;
+  margin-top: 2%;
+  text-align: center;
+  color: #fff;
+  font-family: Garamond; 
+}
+
+.title h3 {
+  font-size: 3em;
+}
+
+.title:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 .tldr {
@@ -50,7 +58,7 @@
 }
 
 .title:hover, .tldr:hover, .overlay:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .article {

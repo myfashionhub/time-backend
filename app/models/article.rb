@@ -1,12 +1,29 @@
 require "#{Rails.root}/lib/google_feed"
 
 class Article < ActiveRecord::Base
-  validates_uniqueness_of :url
+  #validates_uniqueness_of :url
   has_and_belongs_to_many :tags
 
   def self.aggregate
     feeds = Article.feeds
-    GoogleFeed.fetch_articles(feeds)
+    articles = GoogleFeed.fetch_articles(feeds)
+
+    articles.each do |article|
+      if article[:img_url] != nil && article[:categories] != nil
+        new_article = Article.find_or_create_by(
+          url: article[:url], 
+          title: article[:title], 
+          extract: article[:extract], 
+          text: article[:text], 
+          publication: article[:publication], 
+          img_url: article[:img_url], 
+          date: article[:date_published]
+        )
+
+        tag = Tag.find_by(name: article[:categories][0].capitalize)
+        tag.articles << new_article unless tag == nil
+      end
+    end
   end
 
   def self.feeds

@@ -6,12 +6,13 @@ class ArticlesController < ApplicationController
 
   def show
     @tag = Tag.find(params[:id])
-    articles = @tag.articles.take(10)
+    articles = @tag.articles.sort_by { |article|
+      article.created_at
+    }.reverse.take(10)
     render json: articles.to_json
   end
 
   private
-
   def article_params
     params.require(:article).permit(:title, :url, :extract, :date, :publication)
   end
